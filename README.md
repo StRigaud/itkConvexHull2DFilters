@@ -20,14 +20,14 @@ In the case of a labelled image it is possible to define the **LabeValue** to id
 
 ## Install
 
-'''
+```
 git clone https://github.com/StRigaud/itkConvexHull2D.git  
 mkdir itkConvexHull2D/build  
 cd itkConvexHull2D/build  
 ccmake -DCMAKE_BUILD_TYPE=Release ..  
 make  
 make test  
-'''
+```
 
 All tests should pass sucessfully.
 
