@@ -15,11 +15,8 @@ This an ITK filter that take a binary or label input nD image and compute the pi
 
  ## itkBinaryImageToConvexHullFilter
 
-The filter inherit from ImageToImageFilter and take in input an nD binary or labelled image and return the corresponding convex hull.
-By default, the filter will consider all pixel which is not the background (=0) to compute the convex hull.
-In the case of a labelled image it is possible to define the **LabeValue** to identify a specific label object in the input to process. 
-In this case it is also possible to provide the **LabelIndices** and/or provide the object region using the **filter->GetOutput()->SetRequestedRegion(ObjectRegion)**.
-Both indices and region can be computed by the **itkLabelGeometryImageFilter**.
+The filter inherit from ImageToImageFilter and take in input an nD binary or labelled image and return the corresponding convex hull. By default, the filter will consider all pixel which is not the background (=0) to compute the convex hull.
+In the case of a labelled image it is possible to define the **LabeValue** to identify a specific label object in the input to process. In this case it is also possible to provide the **LabelIndices** and/or provide the object region using the **filter->GetOutput()->SetRequestedRegion(ObjectRegion)**. Both indices and region can be computed by the **itkLabelGeometryImageFilter**.
 
 ## Install
 
