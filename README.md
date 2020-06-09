@@ -5,7 +5,7 @@
 
 ## Description
 
-This is a set of ITK filters that take a binary or label input nD image and compute the pixel precise 2D convex hull using quick-hull algorithm.
+This an ITK filter that take a binary or label input nD image and compute the pixel-precise 2D convex hull using quick-hull algorithm.
 
 ## Requirement
 
