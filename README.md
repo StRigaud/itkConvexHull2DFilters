@@ -15,12 +15,25 @@ This an ITK filter that take a binary or label input nD image and compute the pi
 
  ## itkBinaryImageToConvexHullFilter
 
-To Be Writen
+The filter inherit from ImageToImageFilter and take in input an nD binary or labelled image and return the corresponding convex hull.
+By default, the filter will consider all pixel which is not the background (=0) to compute the convex hull.
+In the case of a labelled image it is possible to define the **LabeValue** to identify a specific label object in the input to process. 
+In this case it is also possible to provide the **LabelIndices** and/or provide the object region using the **filter->GetOutput()->SetRequestedRegion(ObjectRegion)**.
+Both indices and region can be computed by the **itkLabelGeometryImageFilter**.
 
-<!-- The filter inherit from ImageToImageFilter and take in input a 2D or 3D binary image and return the corresponding convex hull mask of the binary pixel. If the image is label, the filter take an optional parameter m_LabelValue and, if specified, will only compute the hull of the specified label
-object in the image. All label correspondant are respected.  
-  
-The filter work more efficiently if used with the filter->GetOutput()->SetRequestedRegion(ObjectRegion), where ObjectRegion is the region of the object/label
-to process.  
-The filter work best with itkLabelGeometryImageFilter class to pre-compute region, indices, and iterate on each label in the image.
-See itkBinaryImageToConvexHullFilterTest.cpp and itkBinaryImageToConvexHullFilterTest2.cpp for proper usage of the filter. -->
+## Install
+
+'''
+git clone https://github.com/StRigaud/itkConvexHull2D.git  
+mkdir itkConvexHull2D/build  
+cd itkConvexHull2D/build  
+ccmake -DCMAKE_BUILD_TYPE=Release ..  
+make  
+make test  
+'''
+
+All tests should pass sucessfully.
+
+## Usage
+
+See **itkBinaryImageToConvexHullFilterTest** and **itkBinaryImageToConvexHullFilterTest2** for example on how to use the filter.
