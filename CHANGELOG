@@ -1,0 +1,10 @@
+
+v1.1 - 2020-02-13
+- add label value parameter
+- add test script for binary, single label, and multilabel computing
+
+v1 - 2020-02-11
+- integrate 2D quickhull algorithm into filter
+
+v0 - 2020-02-07
+- Starting project
