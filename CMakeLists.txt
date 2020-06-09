@@ -29,12 +29,12 @@ include_directories(includes)
 
 add_executable(itkBinaryImageToConvexHullFilterTest itkBinaryImageToConvexHullFilterTest.cpp)
 add_executable(itkBinaryImageToConvexHullFilterTest2 itkBinaryImageToConvexHullFilterTest2.cpp)
-add_executable(itkLabelImageToConvexHullFilterTest itkLabelImageToConvexHullFilterTest.cpp)
+# add_executable(itkLabelImageToConvexHullFilterTest itkLabelImageToConvexHullFilterTest.cpp)
 
 
 target_link_libraries(itkBinaryImageToConvexHullFilterTest ${ITK_LIBRARIES})
 target_link_libraries(itkBinaryImageToConvexHullFilterTest2 ${ITK_LIBRARIES})
-target_link_libraries(itkLabelImageToConvexHullFilterTest ${ITK_LIBRARIES})
+# target_link_libraries(itkLabelImageToConvexHullFilterTest ${ITK_LIBRARIES})
 
 
 set_target_properties(itkBinaryImageToConvexHullFilterTest
@@ -44,8 +44,8 @@ set_target_properties(itkBinaryImageToConvexHullFilterTest2
                       PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
 
-set_target_properties(itkLabelImageToConvexHullFilterTest
-                      PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
+# set_target_properties(itkLabelImageToConvexHullFilterTest
+#                       PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
 # Tests
 # ##############################################################################
@@ -68,7 +68,7 @@ add_test(NAME ConvexHullToBinaryImageTest4
         COMMAND ${BIN_DIR}/itkBinaryImageToConvexHullFilterTest2 ${DATA_DIR}/test3.tif 
        ${DATA_DIR}/result4.tif)
 
-add_test(NAME ConvexHullToLabelImageTest1
-        COMMAND ${BIN_DIR}/itkLabelImageToConvexHullFilterTest ${DATA_DIR}/test3.tif 
-       ${DATA_DIR}/result5.tif)
+# add_test(NAME ConvexHullToLabelImageTest1
+#         COMMAND ${BIN_DIR}/itkLabelImageToConvexHullFilterTest ${DATA_DIR}/test3.tif 
+#        ${DATA_DIR}/result5.tif)
 
