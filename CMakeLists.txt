@@ -8,7 +8,7 @@ project(itkBinaryImageToConvexHullFilter)
 # ##############################################################################
 
 # ITK Libraries
-# set(ITK_DIR /home/stephane/Libraries/ITK/release)
+set(ITK_DIR /home/stephane/Libraries/ITK/release)
 find_package(ITK REQUIRED)
 if(ITK_FOUND)
   include(${ITK_USE_FILE})
@@ -27,9 +27,9 @@ include_directories(includes)
 # Executable
 # ##############################################################################
 
-add_executable(itkBinaryImageToConvexHullFilterTest itkBinaryImageToConvexHullFilterTest.cpp)
-add_executable(itkBinaryImageToConvexHullFilterTest2 itkBinaryImageToConvexHullFilterTest2.cpp)
-# add_executable(itkLabelImageToConvexHullFilterTest itkLabelImageToConvexHullFilterTest.cpp)
+add_executable(itkBinaryImageToConvexHullFilterTest tests/itkBinaryImageToConvexHullFilterTest.cpp)
+add_executable(itkBinaryImageToConvexHullFilterTest2 tests/itkBinaryImageToConvexHullFilterTest2.cpp)
+# add_executable(itkLabelImageToConvexHullFilterTest tests/itkLabelImageToConvexHullFilterTest.cpp)
 
 
 target_link_libraries(itkBinaryImageToConvexHullFilterTest ${ITK_LIBRARIES})
